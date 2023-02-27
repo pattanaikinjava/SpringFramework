@@ -21,4 +21,10 @@ public class NetworkService
 				+ " is connected to "+networkAdaptor.getPortIp() +
 				  " with ip address "+ ipAddress);
 	}
+	
+	public void getServiceDisConn(String serviceName) {
+		System.out.println("OOPS !!!\n"+ serviceName + ""
+				+ " is disconnected to "+networkAdaptor.getPortIp() +
+				  " with ip address "+ ipAddress);
+	}
 }
