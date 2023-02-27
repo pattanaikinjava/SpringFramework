@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!--  setter injection reference type -->
+    	<bean id="cob" class="in.company.setter.CompanyName">
+    		<property name="compName">
+    			<value> Accenture</value>
+    		</property>
+    	</bean>
+    	
+    	<bean id="eomp" class="in.company.constructor.Employeee">
+    		<constructor-arg name="empName">
+    			<value> Mr Ajay Shekhar</value>
+    		</constructor-arg>
+    		<constructor-arg name="compName">
+    		 <ref bean="cob"></ref>
+    		</constructor-arg>
+    	</bean>
+</beans>
